@@ -1,35 +1,60 @@
----
 layout: sidebar
 style: dark
+
 plugins:
   - jekyll-octicons
   - jekyll-github-metadata
   - jemoji
+
 permalink: /:year/:month/:day/:title/
+
 defaults:
-  - scope:
-      path: ""
-      type: posts
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
     values:
-      layout: post
+      layout: "post"
+
 projects:
-  sort_by: stars
+  sort_by: pushed
+  # sort_by options:
+  #   - pushed
+  #   - stars
   limit: 9
   exclude:
     archived: false
     forks: true
-    projects: null
+    projects:
+    # - repo-name
+
 social_media:
+  # behance: your_username
+  # dribbble: your_username
+  # facebook: your_username
+  # hackerrank: your_username
   instagram: calpicomai
+  # keybase: your_username
   linkedin: callieborgerding
+  # mastodon: your_username
+  # medium: your_username
+  # stackoverflow: your_user_id
+  # telegram: your_username
   twitter: calpicomai
+  # unsplash: your_username
+  # vk: your_username
+  # website: http://your_website_url
+  # youtube: your_username
+
 topics:
   - name: React
     web_url: https://github.com/meta/react
     image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png
+
   - name: GraphQL
     web_url: https://github.com/graphql
     image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/2048px-GraphQL_Logo.svg.png
+
   - name: Bootstrap
     web_url: https://github.com/twbs/bootstrap
     image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1280px-Bootstrap_logo.svg.png
